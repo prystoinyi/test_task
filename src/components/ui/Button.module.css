@@ -1,0 +1,13 @@
+@reference "../../app/globals.css";
+
+.btn {
+  @apply h-38 sm:h-40 md:h-42
+         py-4 px-8
+         rounded-full
+         bg-(--color-on-primary);
+}
+
+.text {
+  @apply font-(family-name:--font-markazi) font-semibold
+         text-[1.4rem]/1 text-(--color-on-secondary);
+}

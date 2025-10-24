@@ -1,0 +1,62 @@
+@reference "../../app/globals.css";
+
+.container, .innerContainer {
+  @apply flex flex-col w-full;
+}
+
+.innerContainer {
+  @apply pt-10 sm:pt-16
+         px-12 sm:px-20 md:px-24
+         pb-20 md:pb-28
+         rounded-[8px] sm:rounded-[12px] md:rounded-[24px]
+         bg-(--color-on-primary)/10;
+
+  .title {
+    @apply md:font-bold;
+  }
+
+  > ul li {
+    @apply relative pl-20 sm:pl-24 md:pl-26;
+
+    &::before {
+      content: "•";
+
+      @apply absolute top-0 left-6 md:left-8 font-bold;
+    }
+  }
+
+  & + & {
+    @apply mt-8 sm:mt-10;
+  }
+
+  &:last-of-type {
+    @apply mb-16 sm:mb-20 md:mb-24;
+  }
+}
+
+h1.title, div.title {
+  @apply mb-8 md:mb-10
+         sm:text-[17px] md:text-[18px]
+         leading-[1.2]
+         font-bold sm:font-extrabold;
+}
+
+h1.title {
+  @apply inline-block text-ellipsis overflow-hidden;
+}
+
+div.title {
+  @apply inline-flex items-center whitespace-nowrap;
+
+  h1 {
+    @apply text-ellipsis overflow-hidden;
+  }
+}
+
+.description {
+  @apply mb-16 sm:mb-20 md:mb-24;
+}
+
+.btn {
+  @apply sm:self-center sm:w-[143px];
+}

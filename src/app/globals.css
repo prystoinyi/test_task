@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #EFF0EB;
+  --color-on-primary: #E27979;
+
+  --color-secondary: #E27979;
+  --color-on-secondary: #EEE4E0;
+
+  --spacing: 1px;
+}
+
+@theme {
+  --color-background: var(--color-primary);
+  --color-foreground: var(--color-on-primary);
+
+  --default-font-family: 'Manrope', 'Manrope Fallback';
+
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1158px;
+}
+
+html {
+  @apply text-[14px] sm:text-[16px] md:text-[17px];
+  @apply leading-[1.2] sm:leading-[1.5] md:leading-[1.6];
+
+  font-weight: 400;
+}
+
+body {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}

@@ -1,0 +1,8 @@
+@reference "../../app/globals.css";
+
+.container {
+  @apply pt-16 sm:pt-20 md:pt-24 px-16 sm:px-20 md:px-30 pb-28 md:pb-32
+         rounded-[10] sm:rounded-[16] md:rounded-[28]
+         border md:border-2 border-(--color-on-primary)
+         bg-(--color-on-secondary);
+}

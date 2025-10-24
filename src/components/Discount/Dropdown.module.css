@@ -1,0 +1,54 @@
+@reference "../../app/globals.css";
+
+.dropdown {
+  @apply relative;
+}
+
+.btn {
+  @apply inline-flex items-center
+         py-4 px-10
+         ml-18
+         rounded-[6] sm:rounded-[10px]
+         border md:border-2 border-(--color-on-primary)
+         bg-(--color-primary);
+
+  .icon {
+    @apply w-[16px] h-[16px]
+           ml-1
+           transition-transform duration-200;
+
+    &.open {
+      @apply rotate-180;
+    }
+  }
+}
+
+.list {
+    @apply absolute top-full right-0 z-1
+           overflow-hidden
+           w-[10rem]
+           mt-8
+           origin-top transition-all duration-200 ease-out
+           opacity-0 scale-95 -translate-y-1 pointer-events-none
+           shadow-md
+           rounded-md
+           border md:border-2 border-(--color-on-primary)
+           bg-(--color-primary);
+
+  &.open {
+    @apply opacity-100 scale-100 translate-y-0 pointer-events-auto;
+  }
+}
+
+.item {
+  @apply flex justify-between items-center
+         py-10 px-14
+         transition
+         cursor-pointer
+         font-normal
+         hover:bg-(--color-secondary) hover:text-(--color-on-secondary);
+
+  .icon {
+    @apply w-[1rem] h-[1rem];
+  }
+}
