@@ -1,0 +1,47 @@
+@reference "../../app/globals.css";
+
+.container {
+	@apply flex flex-col w-full mt-20;
+}
+
+div.title {
+	@apply mb-8 md:mb-10
+           sm:text-[17px] md:text-[18px]
+           leading-[1.2]
+           font-bold sm:font-extrabold;
+}
+
+div.title {
+	@apply inline-flex items-center justify-between whitespace-nowrap;
+
+	h1 {
+		@apply text-ellipsis overflow-hidden;
+	}
+
+	.add {
+		@apply cursor-pointer;
+	}
+}
+
+.item {
+	@apply relative inline-flex justify-between w-full
+		   pl-20 sm:pl-24 md:pl-26;
+
+	&::before {
+		content: '•';
+
+		@apply absolute top-0 left-6 md:left-8 font-bold;
+	}
+
+	.controls {
+		@apply inline-flex;
+
+		.icon {
+			@apply w-[1.5rem] h-[1.5rem]
+				   ml-4 p-[0.25rem]
+				   rounded-[0.25rem]
+				   cursor-pointer
+             	   hover:bg-(--color-secondary) hover:text-(--color-on-secondary);
+		}
+	}
+}
